@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DFlip Fullscreen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Flipbook StyleSheet -->
+    <link href="../dflip/css/dflip.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Icons Stylesheet -->
+    <link
+      href="../dflip/css/themify-icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e5e0f7; /* matching with DFlip bg */
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Fullscreen area */
+      .container {
+        width: 100%;
+        height: 100vh;
+        background: #e5e0f7;
+        display: flex;
+        justify-content: center; /* center horizontal */
+        align-items: center; /* center vertical */
+      }
+
+      /* Box untuk memastikan flipbook di tengah */
+      .center-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Flipbook fullscreen tetapi tetap center */
+      ._df_book {
+        width: 100%;
+        height: 100%;
+        background: #e5e0f7 !important;
+      }
+
+      /* ===== MOBILE ===== */
+      @media (max-width: 768px) {
+        html,
+        body {
+          overflow: hidden;
+          background: #e5e0f7;
+        }
+
+        .container {
+          height: 100dvh;
+        }
+
+        .center-box {
+          height: 100dvh;
+        }
+
+        ._df_book {
+          height: 100dvh;
+          background: #e5e0f7 !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="center-box">
+        <div
+          class="_df_book"
+          webgl="true"
+          backgroundcolor="lavender"
+          source="example-assets/books/intro.pdf"
+          id="df_manual_book"
+        ></div>
+      </div>
+    </div>
+
+    <!-- jQuery  -->
+    <script src="../dflip/js/libs/jquery.min.js"></script>
+    <!-- Flipbook main JS -->
+    <script src="../dflip/js/dflip.min.js"></script>
+  </body>
+</html>
