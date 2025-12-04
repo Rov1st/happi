@@ -187,6 +187,18 @@
           background: #e5e0f7 !important;
         }
 
+        .now-playing {
+          font-size: 12px;
+          padding: 10px 15px;
+          max-width: 250px;
+          top: 15px;
+          right: 15px;
+        }
+
+        .marquee-text {
+          font-size: 12px;
+        }
+
         .splash-title {
           font-size: 36px;
         }
@@ -215,16 +227,15 @@
     <!-- Splash Screen -->
     <div class="splash-overlay" id="splashScreen">
       <div class="splash-content" style="display: flex; flex-direction: column">
-        <div class="splash-title">HAI</div>
+        <div class="splash-title">HAII</div>
         <div class="splash-subtitle">
-          Dipencet tombolnya ya.. baca pelan pelan
+          Di pencet ya... bacanya pelan-pelan aja
         </div>
         <button
           class="start-button"
           id="startButton"
           style="justify-content: center"
         >
-          <span></span>
           <span>Baca</span>
         </button>
       </div>
@@ -239,6 +250,13 @@
     <button class="music-control" id="musicToggle" title="Mute/Unmute Music">
       🔊
     </button>
+
+    <!-- Now Playing Marquee -->
+    <div class="now-playing" id="nowPlaying">
+      <div class="marquee-container">
+        <div class="marquee-text">🎵 Now Playing: Vierra - Cantik</div>
+      </div>
+    </div>
 
     <div class="container">
       <div class="center-box">
